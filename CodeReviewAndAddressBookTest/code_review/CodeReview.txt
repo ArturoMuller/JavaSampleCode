@@ -1,0 +1,27 @@
+Please enter your code review in this file as plain text
+and make sure to include it when you commit your project.
+-------------STOPWATCHFACTORY------------
+method getStopwatch 
+could have used a hashmap or some other type of list that does not permit duplicates 
+instead of looping thru a list.  But then would of sacrificed the use of CopyOnWriteArrayList(for concurrent access)
+NullPointerException is caught (because parameter value is null where prohibited) as an IllegalArgumentException when checking the id.
+
+method getStopwatches() 
+should not be using a suppress warning, clone should be done manually instead of using this method to avoid this suppression.
+good use of CopyOnWriteArrayList for concurrent accessing (assuming StopWatch creation is not always happening).
+
+------------STOPWATCHCREATOR-------------
+
+A single Stop watch can't be used since the class StopwatchCreator is package protected, 
+
+Good use of more General type List
+
+line 53 of start method is redundant because PastTime and LapTime stored is the same when clock was stopped
+
+it is better to lock on an object rather than synchronize the method definitions
+
+equals could simply be the id being equal to what is compared since it is already inmutable it wont make
+a difference and there will never be equal objects since the StopwatchCreator only works thru the factory
+hash code could also be based on the ID
+HashCode and Equals shouldn't be so .
+

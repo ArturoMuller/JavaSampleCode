@@ -1,0 +1,25 @@
+Please enter your code review in this file as plain text
+and make sure to include it when you commit your project.
+------Contact-------------------
+contact name is mutable classes should be ummutable unless theres a very good reason to make them mutable.  You should always make small value objects immutable.
+
+
+line 57 throws a number format exception that is not necessary becuase parse int on line 55 already throws this exception.
+Fix line 57 throw an IlegalArgumentException, which is more appropriate.
+
+line 69 thru 74 it would be helpful to check the email format and make sure it is correct if not throw an IlegalArgumentException
+
+the equals method is not properly written because if I pass a String Object and a String primitive in the builder the two instances are not equal 
+instead of using ==  what should be used is the .equals this behavior is correct in the hashCode and hashCode and String have to be equivalent
+
+missing a toString method to print a contact
+
+
+
+-----AdressBook-----------------
+it is ok to have a universal search field but as per the PS1 instructions there is supposed to be a search for every field in a contact and this was not provided.
+
+it would be nice is export contact could also take a java File Object not only a String 
+ExportContact should catch an IOexception instead of just an exception and also throw an IOException if write is unsucesful in order to know what was wrong.
+
+Import Contact should throw an IOException 
