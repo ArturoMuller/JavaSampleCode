@@ -14,7 +14,7 @@ public class GraphTest {
 	
 	
 	@SuppressWarnings("unchecked")
-	public void addNodes(Graph<String> g, Node<String>... nodes){
+	public static void addNodes(Graph<String> g, Node<String>... nodes){
 		for(Node<String> n: nodes){
 			g.addNode(n);
 		}
@@ -206,6 +206,39 @@ public class GraphTest {
 		assertEquals("r", itr.next());
 		assertEquals("s", itr.next());
 		assertEquals("a", itr.next());
+		assertFalse(itr.hasNext());
+	}
+	
+	
+	@SuppressWarnings("unchecked")
+	@Test
+	public void DFSIteratorOtherTest(){
+		Node<Integer> one = new Node<Integer>(1);
+		Node<Integer> two = new Node<Integer>(2);
+		Node<Integer> three = new Node<Integer>(3);
+		Node<Integer> four = new Node<Integer>(4);
+		Node<Integer> five = new Node<Integer>(5);
+		Node<Integer> six = new Node<Integer>(6);
+		
+		Graph<Integer> f = new Graph<Integer>(one);
+		f.addNode(two);
+		f.addNode(three);
+		f.addNode(four);
+		f.addNode(five);
+		f.addNode(six);
+		
+		f.addEdge(one, two, 2);
+		f.addEdge(one, three, 2);
+		f.addEdge(three, four, 2);
+		f.addEdge(three, six, 2);
+		f.addEdge(four, five, 2);
+		Iterator<Integer> itr = f.DFSIterator();
+		assertEquals(new Integer(2), itr.next());
+		assertEquals(new Integer(5), itr.next());
+		assertEquals(new Integer(4), itr.next());
+		assertEquals(new Integer(6), itr.next());
+		assertEquals(new Integer(3), itr.next());
+		assertEquals(new Integer(1), itr.next());
 		assertFalse(itr.hasNext());
 	}
 	

@@ -163,7 +163,7 @@ public class Graph<T> {
 	
 	/**
 	 * Iterator for the Graph in BFS order returning the values
-	 * if a Node is not connected to the source its value will not
+	 * if a Node is not connected to the source it's value will not
 	 * be returned
 	 * @author Arturo Muller
 	 */
@@ -206,7 +206,8 @@ public class Graph<T> {
 
 	
 	/**
-	 * Iterator for the Graph in BFS order returning the values
+	 * Iterator for the Graph in DFS order returning the values when
+	 * the node has no unvisited path 
 	 * if a Node is not connected to the source its value will not
 	 * be returned
 	 * @author Arturo Muller
@@ -237,7 +238,6 @@ public class Graph<T> {
 
 		@Override
 		public T next() {
-
 			if (grey.isEmpty()) {
 				while (graphItr.hasNext()) {
 					Node<T> temp = graphItr.next();
