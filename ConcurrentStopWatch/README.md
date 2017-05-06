@@ -14,4 +14,4 @@ This project is a thread-safe stopwatch Library using java.
 
 StopWatch
 ---
-The StopWatch supports the typical operations of a StopWatch 'start()', 'stop()', 'restart()', and 'lap()'
+The StopWatch Object supports the typical operations of a StopWatch `start()`, `stop()`, `restart()`, and `lap()`
