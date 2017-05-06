@@ -78,19 +78,19 @@ public class Graph<T> {
 	 * 
 	 * @param source
 	 */
-	public void removeNode(Node<T> source) {
-		if (!hasNode(source)) {
+	public void removeNode(Node<T> node) {
+		if (!hasNode(node)) {
 			throw new IllegalArgumentException("Node not in Graph.");
 		}
-		if (source == root) {
+		if (node == root) {
 			throw new IllegalArgumentException("Cannot remove the root.");
 		}
-		Iterator<Node<T>> itrSource = source.iterator();
+		Iterator<Node<T>> itrSource = node.iterator();
 		while (itrSource.hasNext()) {
 			Node<T> destination = itrSource.next();
-			destination.removeNode(source);
+			destination.removeNode(node);
 		}
-		nodes.remove(source);
+		nodes.remove(node);
 	}
 	/**
 	 * Connects two nodes with an edge and its respective weight

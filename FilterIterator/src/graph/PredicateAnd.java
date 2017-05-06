@@ -19,8 +19,13 @@ public class PredicateAnd<T> implements Predicate<T>{
 	 * @param b
 	 */
 	public PredicateAnd(Predicate<T> a, Predicate<T> b){
+		if(a != null && b != null){
 		this.a = a;
 		this.b = b;
+		}
+		else{
+			throw new NullPointerException("Predicate cannot be null");
+		}
 	}
 	
 	/**

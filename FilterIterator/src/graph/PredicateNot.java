@@ -18,7 +18,12 @@ public class PredicateNot<T> implements Predicate<T>{
 	 * @param a any predicate
 	 */
 	public PredicateNot(Predicate<T> a){
-		this.a = a;
+		if(a != null){
+			this.a = a;
+			}
+			else{
+				throw new NullPointerException("Predicate cannot be null");
+			}
 	}
 	
 	/**

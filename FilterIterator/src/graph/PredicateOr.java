@@ -19,8 +19,13 @@ public class PredicateOr<T> implements Predicate<T>{
 	 * @param b any predicate object
 	 */
 	public PredicateOr(Predicate<T> a, Predicate<T> b){
-		this.a = a;
-		this.b = b;
+		if(a != null && b != null){
+			this.a = a;
+			this.b = b;
+			}
+			else{
+				throw new NullPointerException("Predicate cannot be null");
+			}
 	}
 	
 	/**
@@ -31,7 +36,6 @@ public class PredicateOr<T> implements Predicate<T>{
 	 */
 	@Override
 	public boolean accept(T item) {
-		// TODO Auto-generated method stub
 		return a.accept(item) || b.accept(item);
 	}
 	
