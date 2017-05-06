@@ -13,7 +13,7 @@ class StopWatch implements Stopwatch {
   private final String ID;
   private long startTime = 0;
   private long stopTime = 0;
-  private long lastTime = 0;
+  private long lapTime = 0;
   private boolean running = false;
   private ArrayList<Long> laps = new ArrayList<Long>();
   private Object lock;
@@ -36,7 +36,7 @@ class StopWatch implements Stopwatch {
           startTime = System.currentTimeMillis();
           running = true;
         } else {
-          startTime += System.currentTimeMillis() - laps.get(laps.size());
+          startTime += System.currentTimeMillis() - lapTime;
           laps.remove(laps.size() - 1);
           running = true;
         }
@@ -50,13 +50,13 @@ class StopWatch implements Stopwatch {
   public void lap() {
     synchronized (lock) {
       if (running && laps.size() == 0) {
-        lastTime = System.currentTimeMillis();
-        long timeElapsed = lastTime - startTime;
+        lapTime = System.currentTimeMillis();
+        long timeElapsed = lapTime - startTime;
         laps.add(new Long(timeElapsed));
       } else if (running && laps.size() > 0) {
-        long tempLastTime = System.currentTimeMillis();
-        long timeElapsed = (tempLastTime - lastTime);
-        lastTime = tempLastTime;
+        long temp_lapTime = System.currentTimeMillis();
+        long timeElapsed = temp_lapTime - lapTime;
+        lapTime = temp_lapTime;
         laps.add(new Long(timeElapsed));
       } else {
         throw new IllegalStateException("stop watch is not running");
@@ -67,12 +67,19 @@ class StopWatch implements Stopwatch {
   @Override
   public void stop() {
     synchronized (lock) {
-      if (running) {
-        stopTime = System.currentTimeMillis();
-        long timeElapsed = (stopTime - lastTime);
-        laps.add(new Long(timeElapsed));
+      if (running && laps.size() == 0) {
+    	   lapTime = System.currentTimeMillis();
+    	   stopTime = lapTime;
+    	   laps.add(new Long(lapTime - startTime));
         running = false;
-      } else {
+      } else if(running && laps.size() > 0) {
+    	     long temp_lapTime = System.currentTimeMillis();
+         long timeElapsed = temp_lapTime - lapTime;
+          lapTime = temp_lapTime;
+   	      stopTime = temp_lapTime;
+          laps.add(new Long(timeElapsed));    
+      }
+      else{
         throw new IllegalStateException("stop watch is not running");
       }
     }
@@ -83,7 +90,7 @@ class StopWatch implements Stopwatch {
     synchronized (lock) {
       startTime = 0;
       stopTime = 0;
-      lastTime = 0;
+      lapTime = 0;
       running = false;
       laps = new ArrayList<Long>();
     }
@@ -96,7 +103,6 @@ class StopWatch implements Stopwatch {
       return copylaps;
     }
   }
-
 
   @Override
   public boolean equals(Object comparingWatch) {
@@ -115,7 +121,6 @@ class StopWatch implements Stopwatch {
   public int hashCode() {
     return ID.hashCode();
   }
-
   
   /**
    * Returns a brief description of this StopWatch. The exact details of the representation are

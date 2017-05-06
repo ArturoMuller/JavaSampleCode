@@ -45,6 +45,12 @@ public class SlowThinker {
           } catch (InterruptedException ignored) { }
           stopwatch.lap();
         }
+        
+        try {
+			Thread.sleep(1);
+		} catch (InterruptedException e) {
+
+		}
         stopwatch.stop();
         List<Long> times = stopwatch.getLapTimes();
         logger.info(times.toString());
