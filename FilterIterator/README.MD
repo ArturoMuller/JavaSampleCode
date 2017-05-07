@@ -4,7 +4,7 @@ FILTER ITERATOR AND GRAPH
 This project is a Library for an undirected GRAPH with generic node values.
 The Graph class has methods `BFSIterator()` and `DFSIterator()` that return an iterator that iterates through the graph from the source using the Breadth first search algorithm for BFS and the Depth first search algorithm for DFS.
 
-The Filter Iterator works the same way as the GRAPH but has the option to filter out any node values based on user rules.
+The FilterIterator works the same way as the GRAPH but has the option to filter out any node values based on rules input by user.
 
 
 **Package graph** contains the graph and all its classes 
