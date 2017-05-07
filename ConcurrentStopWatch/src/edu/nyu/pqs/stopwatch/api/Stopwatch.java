@@ -1,4 +1,4 @@
-package stopwatchApi;
+package edu.nyu.pqs.stopwatch.api;
 
 import java.util.List;
 

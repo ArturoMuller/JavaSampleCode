@@ -23,3 +23,5 @@ ConnectFourFactory.getConnectFourSwing();
 
 Installation
 ---
+inside src
+javac 

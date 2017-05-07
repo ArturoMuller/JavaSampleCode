@@ -3,8 +3,8 @@ package edu.nyu.pqs.stopwatch.demo;
 import java.util.List;
 import java.util.logging.Logger;
 
+import edu.nyu.pqs.stopwatch.api.Stopwatch;
 import edu.nyu.pqs.stopwatch.impl.StopWatchFactory;
-import stopwatchApi.Stopwatch;
 
 /**
  * This is a simple program that demonstrates just some of the functionality
