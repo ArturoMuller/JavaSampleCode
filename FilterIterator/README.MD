@@ -14,6 +14,7 @@ The Filter Iterator works the same way as the GRAPH but has the option to filter
 Example
 ---
 A good Example on how to use the Graph can be found in various classes of the **graphTest** Package 
+
 **Example of using BFS and DFS Iterators of the GraphPackage's Graph Class:**
 ```
 Node<String> r, s, t;
