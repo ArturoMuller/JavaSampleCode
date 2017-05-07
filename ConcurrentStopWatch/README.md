@@ -28,3 +28,9 @@ this is the first lap
 and `getLapTimes()` Returns a list of lap times (in milliseconds).  This method can be called at any time.
 
 
+Running the example Test
+---
+inside src folder 
+comilation `javac edu/nyu/pqs/stopwatch/demo/SlowThinker.java`
+runing `java edu.nyu.pqs.stopwatch.demo.SlowThinker`
+

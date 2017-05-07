@@ -1,6 +1,6 @@
 ObservableConnectFour
 ===
-This project is an connect four API
+This project is a connect four API
 
 Package **connectfour** contains the entire API
 
@@ -19,9 +19,10 @@ public static void main(String[] args) {
 ConnectFourFactory.getConnectFourSwing();
 }
 }
-```
+``````
 
-Installation
+Running the version of the created game
 ---
-inside src
-javac 
+inside src folder 
+copmile `javac connectfourview/ConnectFourApp.java`
+run `java connectfourview/ConnectFourApp`
