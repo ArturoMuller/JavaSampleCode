@@ -63,4 +63,4 @@ Iterator<String> twoAndPred = new FilterIterator<String>(p.BFSIterator(),
 new PredicateAnd<String>(containsE, lessThanEight));
 ``````
 
-For further examples on how to use the Graph please review the **graphTest** Package
+For further examples on how to use the Graph please review the Package **graphTest**  in the testsrc directory
