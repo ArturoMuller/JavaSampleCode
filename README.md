@@ -3,7 +3,7 @@ JAVA SAMPLE CODE
 
 This repository contains several API's as well as snippets of code that I've done in JAVA.
 
-Markup : 1. CodeReviewAndAddressBookTest is a code review for an address book API
+Markup: 1. CodeReviewAndAddressBookTest is a code review for an address book API
 
 2. ConcurrentStopWatch is an API that contains packages to run and test a concurrent stopwatch
 
