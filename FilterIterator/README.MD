@@ -9,7 +9,7 @@ The FilterIterator works the same way as the GRAPH but has the option to filter 
 
 **Package graph** contains the graph and all its classes 
 
-**Package graphTest** contains JUNIT tests for the graph API
+**Package graphTest** contains junit tests for the graph API
 
 Example
 ---

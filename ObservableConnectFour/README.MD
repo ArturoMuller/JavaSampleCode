@@ -1,12 +1,12 @@
 ObservableConnectFour
 ===
-This project is a connect four game implemented using SWING
+This project is a connect four game implemented using java SWING
 
-Package **connectfour** contains the connect four game and everything need
+Package **connectfour** contains the connect four game and everything needed
 
-Package **connectfourTest** contains unit tests for the games logic
+Package **connectfourTest** contains junit tests for the game logic
 
-Package **connectfourview** uses the connectfour package and its classes to loead a version of the game
+Package **connectfourView** uses the connectfour package and its classes to load a version of the game
 
 Example code to run the game from any class
 ---
@@ -21,10 +21,10 @@ ConnectFourFactory.getConnectFourSwing();
 }
 ``````
 
-Running the connectfourview package's connectFourApp
+Running the connectfourView packages using connectFourApp
 ---
 inside src folder 
 
-compile `javac connectfourview/ConnectFourApp.java`
+compile `javac connectfourView/ConnectFourApp.java`
 
-run `java connectfourview/ConnectFourApp`
+run `java connectfourView/ConnectFourApp`

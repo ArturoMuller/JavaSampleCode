@@ -1,4 +1,4 @@
-package connectfourview;
+package connectfourView;
 
 import connectfour.*;
 
