@@ -1,7 +1,7 @@
 CONCURRENT STOPWATCH
 ===
 
-This project is a thread-safe StopWatch object that can be used for timing laps.  The stopwatch objects are created in the StopwatchFactory.  Different threads can share a single stopwatch object and safely call any of the stopwatch methods.
+This project is a thread-safe StopWatch object that can be used for timing laps.  The StopWatch objects are created in the StopwatchFactory.  Different threads can share a single StopWatch object and safely call any of the StopWatch methods.
 
 **Package edu.nyu.pqs.stopwatch.impl** contains the StopWatch and a StopWatch factory 
 
