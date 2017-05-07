@@ -13,12 +13,13 @@ This project is a thread-safe StopWatch object that can be used for timing laps.
 
 Methods of the API
 ---
-The StopWatch Object supports the typical operations of a StopWatch:
+The StopWatch object supports the typical operations of a StopWatch:
 
 `Stopwatch stopwatch = StopWatchFactory.getStopwatch(
 "ID");` creates a new StopWatch Object with the id: 'ID'.
 
 **The methods that the StopWatch has are:**
+
 `start()` to begin the timer
 
 `lap()`   to store the time elapsed since the last time lap() was called or since start() was called if this is the first lap
