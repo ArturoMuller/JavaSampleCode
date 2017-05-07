@@ -1,10 +1,10 @@
-package impl;
+package edu.nyu.pqs.stopwatch.impl;
 
 import java.lang.IllegalStateException;
 import java.util.ArrayList;
 import java.util.List;
 
-import api.Stopwatch;
+import stopwatchApi.Stopwatch;
 
 /**
  * The StopWatch is a thread-safe inner class for a StopWatch object. It

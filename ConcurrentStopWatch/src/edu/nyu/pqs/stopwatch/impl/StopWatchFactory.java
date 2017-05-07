@@ -1,11 +1,11 @@
-package impl;
+package edu.nyu.pqs.stopwatch.impl;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import api.Stopwatch;
+import stopwatchApi.Stopwatch;
 
 /**
  * The StopwatchFactory is a thread-safe factory class for StopWatch objects. It maintains
