@@ -11,7 +11,7 @@ This project is a thread-safe StopWatch object that can be used for timing laps.
 
 
 
-Example
+Methods of the API
 ---
 The StopWatch Object supports the typical operations of a StopWatch:
 

@@ -1,21 +1,21 @@
-FILTER ITERATOR and GRAPH 
+FILTER ITERATOR AND GRAPH 
 ===
 
-
 This project is a Library for an undirected GRAPH with generic node values.
-The Graph class returns an iterator that can be iterated by using DFS and BFS algorithms
+The Graph class has methods `BFSIterator()` and `DFSIterator()` that return an iterator that iterates through the graph from the source using the Breadth first search algorithm for BFS and the Depth first search algorithm for DFS.
+
 The Filter Iterator works the same way as the GRAPH but has the option to filter out any node values based on user rules.
 
 
 **Package graph** contains the graph and all its classes 
 
-**Package graphTest** contains a test for all public clsess
+**Package graphTest** contains JUNIT tests for the graph API
 
 Example
 ---
-A good Example on how to use the Graph can be found in various classes of the **graphTest** Package 
+ 
 
-**Example of using BFS and DFS Iterators of the GraphPackage's Graph Class:**
+**Example for using the BFS and DFS Iterators of the Graph Package's Graph Class:**
 ```
 Node<String> r, s, t;
 Graph<String> p;
@@ -31,7 +31,7 @@ Iterator<String> itrBFS = p.BFSIterator();
 Iterator<String> itrDFS = p.DFSIterator();
 `````
 
-**Example of using the FilterIterator class from the GraphPackage's FilterIterator Class::**
+**Example for creating a simple graph and using rules to initialize the FilterIterator class:**
 ```
 Node<String> r, s, t;
 Graph<String> p;
@@ -63,4 +63,4 @@ Iterator<String> twoAndPred = new FilterIterator<String>(p.BFSIterator(),
 new PredicateAnd<String>(containsE, lessThanEight));
 ``````
 
-
+For further examples on how to use the Graph please review the **graphTest** Package
