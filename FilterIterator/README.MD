@@ -1,11 +1,10 @@
-FILTER ITERATOR
+FILTER ITERATOR and GRAPH 
 ===
 
 
-This project is an undirected GRAPH with generic node values and Integer edge weights.
+This project is a Library for an undirected GRAPH with generic node values.
 The Graph class returns an iterator that can be iterated by using DFS and BFS algorithms
-The Filter Iterator works the same way as the mentioned one exept that it filters out any 
-predicates used it's constructor
+The Filter Iterator works the same way as the GRAPH but has the option to filter out any node values based on user rules.
 
 
 **Package graph** contains the graph and all its classes 
@@ -22,21 +21,17 @@ Graph<String> p;
 s = new Node<String>("s");
 r = new Node<String>("r");
 t = new Node<String>("t");
-//graph must be created with a node
 p = new Graph<String>(s);
-//add any other remaining nodes to graph
 p.addNode(t);
 p.addNode(r);
-//add edges and their weights
 p.addEdge(s, r, 20);
 p.addEdge(s, t, 15);
-//Initialize and use BFS Iterator as needed
 Iterator<String> itrBFS = p.BFSIterator();
-//or Initialize and use DFS Iterator as needed
 Iterator<String> itrDFS = p.DFSIterator();
-// use Iterator as needed
+`````
 
 **Example of using the FilterIterator class from the GraphPackage's FilterIterator Class::**
+```
 Node<String> r, s, t;
 Graph<String> p;
 p = new Graph<String>(s);
@@ -65,7 +60,6 @@ return city.contains("e");
 //Create an iterator that connects these two predicates with an and statement
 Iterator<String> twoAndPred = new FilterIterator<String>(p.BFSIterator(),
 new PredicateAnd<String>(containsE, lessThanEight));
-// use Iterator as needed
-
+``````
 
 
