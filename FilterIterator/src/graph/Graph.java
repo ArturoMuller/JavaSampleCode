@@ -48,7 +48,7 @@ public class Graph<T> {
 	/**
 	 * This is how a node is added to the graph
 	 * 
-	 * @param node
+	 * @param node 
 	 * @throws NullPointerException
 	 * @throws IlegalArgumentException
 	 */

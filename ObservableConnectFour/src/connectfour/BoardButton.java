@@ -10,7 +10,7 @@ import java.awt.event.ActionEvent;
  * stores each position
  * @author Arturo Muller
  */
-public class BoardButton extends JButton implements ActionListener {
+class BoardButton extends JButton implements ActionListener {
 	/**
 	 * 
 	 */

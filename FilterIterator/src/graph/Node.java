@@ -22,7 +22,7 @@ public class Node<T> implements Iterable<Node<T>>{
 	
 	/**
 	 * Constructs and initializes a node with any value
-	 * @param value to set the node
+	 * @param val value to set the node
 	 */
 	public Node(T val) {
 		setValue(val);
@@ -39,7 +39,7 @@ public class Node<T> implements Iterable<Node<T>>{
 	
 	/**
 	 * Changes the current value of the node to a new value
-	 * @param value to set the node
+	 * @param val value to set the node
 	 */
 	public void setValue(T val) {
 		if(val != null){
@@ -96,7 +96,7 @@ public class Node<T> implements Iterable<Node<T>>{
 		return false;
 	}
 	/**
-	 * @ return new NodeIterator inner class 
+	 * @return new NodeIterator inner class 
 	 */
 	@Override
 	public Iterator<Node<T>> iterator() {

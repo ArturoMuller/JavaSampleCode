@@ -8,7 +8,7 @@ import java.util.NoSuchElementException;
  * always passes the predicates test conditions
  * @author Michael Schidlowsky
  *
- * @param <T>
+ * @param <T> generic param 
  */
 public class FilterIterator<T> implements Iterator<T> {
 
