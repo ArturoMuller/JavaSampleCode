@@ -32,7 +32,9 @@ The StopWatch Object supports the typical operations of a StopWatch:
 
 Running the example Test
 ---
-inside src folder 
-compile `javac edu/nyu/pqs/stopwatch/demo/SlowThinker.java`
-run `java edu.nyu.pqs.stopwatch.demo.SlowThinker`
+when inside src folder
+ 
+compile: `javac edu/nyu/pqs/stopwatch/demo/SlowThinker.java`
+
+run: `java edu.nyu.pqs.stopwatch.demo.SlowThinker`
 
